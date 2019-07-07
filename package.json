@@ -1,0 +1,12 @@
+{
+  "name": "heros",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/cosmos": "^2.1.7"
+  },
+  "devDependencies": {}
+}
