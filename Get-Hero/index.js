@@ -1,5 +1,11 @@
-module.exports = async function(context, config) {
-  context.log('Get heros');
+const { okJson, errorJson } = require('../Shared/util');
+const container = require('../Shared/service');
 
-  context.res.json({ hello: 'world' });
+module.exports = async function(context) {
+  try {
+    const { result: heros } = await container.items.readAll().toArray();
+    return okJson({ heros });
+  } catch (err) {
+    return errorJson(err);
+  }
 };
