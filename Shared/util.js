@@ -8,7 +8,7 @@ const resJson = (status = 200) => body => ({
 
 const okJson = body => resJson()(body);
 
-const errorJson = err => resJson(500)({ err });
+const errorJson = err => resJson(500)(err);
 
 module.exports = {
   resJson,
